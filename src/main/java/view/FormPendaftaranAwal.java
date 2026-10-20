@@ -189,7 +189,7 @@ public class FormPendaftaranAwal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(33, 33, 33)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtNama, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -215,7 +215,7 @@ public class FormPendaftaranAwal extends javax.swing.JFrame {
                     .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(32, 32, 32)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(62, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -250,27 +250,21 @@ public class FormPendaftaranAwal extends javax.swing.JFrame {
     }//GEN-LAST:event_cmbKursusActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
-    // Mereset semua form inputan
+            // Mereset semua form inputan
     txtNama.setText("");
     txtBiaya.setText("");
     txtJumlah.setText("");
-
+    
     // Mengembalikan pilihan kursus ke indeks pertama (default)
     if (cmbKursus.getItemCount() > 0) {
         cmbKursus.setSelectedIndex(0);
     }
-
+    
     // Mengosongkan text area hasil
     txtHasil.setText("");
-
+    
     // Mengembalikan kursor fokus ke inputan nama kembali
     txtNama.requestFocus();
-
-    // --- MENAMPILKAN POP-UP NOTIFIKASI ---
-    javax.swing.JOptionPane.showMessageDialog(this, 
-        "Data form berhasil direset!", 
-        "Informasi", 
-        javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnResetActionPerformed
 
     private void btnProsesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProsesActionPerformed
