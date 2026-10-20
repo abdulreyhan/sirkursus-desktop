@@ -415,6 +415,10 @@ public class FormPendaftaranKursus extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(FormPendaftaranKursus.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+<<<<<<< HEAD
+=======
+        //</editor-fold>
+>>>>>>> origin/master
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
