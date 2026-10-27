@@ -1,15 +1,25 @@
 package app;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import model.Instruktur;
 import model.Orang;
 import model.Peserta;
+=======
+import model.Orang;
+import model.Peserta;
+import model.Instruktur;
+>>>>>>> 6a39aeddb1585dfd336a92b3a9314d61141b3724
 
 public class DemoInheritance {
     public static void main(String[] args) {
         ArrayList<Orang> daftarOrang = new ArrayList<>();
 
+<<<<<<< HEAD
         // Memasukkan 3 Peserta ke dalam list
+=======
+        // Memasukkan 3 Peserta ke dalam list (menggunakan datamu sebagai salah satu object)
+>>>>>>> 6a39aeddb1585dfd336a92b3a9314d61141b3724
         daftarOrang.add(new Peserta(1, "Abdul Reyhan Syaidina", "081234567890", "2924020", "Informatika"));
         daftarOrang.add(new Peserta(2, "Rafi Akbar", "081298765432", "252002", "Informatika"));
         daftarOrang.add(new Peserta(3, "Alya Rahma", "081234567891", "252001", "Informatika"));
