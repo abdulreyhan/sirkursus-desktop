@@ -1,0 +1,30 @@
+CATATAN PENGUJIAN END-TO-END PRAKTIKUM PBO PERTEMUAN 11
+Project : SIKURSUS Desktop
+Nama    : Abdul Reyhan Syaidina
+NIM     : 2924020
+
+Hasil Pengujian Skenario (T01 - T12):
+[PASS] T01 - Username dan password kosong:
+       Muncul dialog peringatan "Username dan password wajib diisi." dan tidak masuk ke DashboardFrame.
+[PASS] T02 - Username benar, password salah:
+       Muncul dialog "Login gagal. Periksa username, password, atau status user.", field password dikosongkan kembali.
+[PASS] T03 - Login admin / Admin@123:
+       DashboardFrame terbuka, status menampilkan User: admin dan Role: ADMIN, seluruh menu Master (Peserta, Instruktur, Kursus, Kelas) aktif.
+[PASS] T04 - Login operator / Operator@123:
+       DashboardFrame terbuka, status menampilkan User: operator dan Role: OPERATOR, menu Peserta aktif sedangkan Instruktur, Kursus, dan Kelas nonaktif.
+[PASS] T05 - Klik menu Peserta 5 kali berturut-turut:
+       WindowManager menjaga hanya satu instance PesertaFrame yang terbuka dan membawanya ke depan (toFront).
+[PASS] T06 - Tutup PesertaFrame dengan tombol X:
+       PesertaFrame tertutup (DISPOSE_ON_CLOSE) dan DashboardFrame tetap aktif/hidup.
+[PASS] T07 - Buka Peserta lagi setelah ditutup:
+       WindowManager berhasil membuat instance PesertaFrame baru dan menampilkannya kembali.
+[PASS] T08 - Buka Kursus/Instruktur/Kelas sebagai ADMIN:
+       Seluruh form child tampil dengan normal dan DashboardFrame tetap aktif.
+[PASS] T09 - Logout ketika child form masih terbuka:
+       Konfirmasi muncul; saat pilih Yes, WindowManager.closeAll() menutup seluruh child form, UserSession.clear() menghapus session, Dashboard tertutup, dan kembali ke LoginFrame.
+[PASS] T10 - Matikan service MySQL lalu coba login:
+       Muncul dialog "Tidak dapat mengakses database" (Database Error) dengan rapi tanpa membuat aplikasi crash.
+[PASS] T11 - Pindahkan project ke folder lain:
+       Icon pada menu Master tetap tampil karena dimuat melalui classpath resource getClass().getResource().
+[PASS] T12 - Pilih menu Tutup Aplikasi:
+       Muncul dialog konfirmasi; memilih Yes menghentikan program sepenuhnya (System.exit(0)).
