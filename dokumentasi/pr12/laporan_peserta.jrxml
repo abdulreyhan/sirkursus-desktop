@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laporan_peserta" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2b437d59-3a59-4aaa-a4e8-9a5c75cc51d3">
+	<property name="net.sf.jasperreports.awt.ignore.missing.font" value="true"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SIKURSUS MySQL"/>
+	<queryString>
+		<![CDATA[SELECT
+  id_peserta,
+  nim,
+  nama,
+  jenis_kelamin,
+  prodi,
+  no_hp,
+  email
+FROM peserta
+ORDER BY nama ASC]]>
+	</queryString>
+	<field name="id_peserta" class="java.lang.Integer"/>
+	<field name="nim" class="java.lang.String"/>
+	<field name="nama" class="java.lang.String"/>
+	<field name="jenis_kelamin" class="java.lang.String"/>
+	<field name="prodi" class="java.lang.String"/>
+	<field name="no_hp" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<title>
+		<band height="60">
+			<staticText>
+				<reportElement x="0" y="8" width="555" height="26" uuid="ba73ef92-9f71-4abb-b0bd-8894d549c21f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA PESERTA KURSUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="34" width="555" height="18" uuid="6aea7036-f845-4534-842f-58ddbc6b8478"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[SIKURSUS Desktop - Pemrograman Berorientasi Objek]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="24">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="30" height="24" backcolor="#D9E8E4" uuid="ac5ff55e-241e-419e-bcd2-a236a48dd282"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="30" y="0" width="70" height="24" backcolor="#D9E8E4" uuid="d5746e09-d31e-4e5d-82f9-ca5c96b728e1"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="100" y="0" width="135" height="24" backcolor="#D9E8E4" uuid="bc310915-830d-4281-ba70-2b653ce5a1fe"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="235" y="0" width="35" height="24" backcolor="#D9E8E4" uuid="bec7401d-e628-409d-9a88-d758cadd9942"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[JK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="270" y="0" width="95" height="24" backcolor="#D9E8E4" uuid="969f505b-7514-4cef-b175-bfb8fb5b9c5e"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prodi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="365" y="0" width="85" height="24" backcolor="#D9E8E4" uuid="02d550b5-9fbe-4b20-9bca-34110582490f"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No. HP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="450" y="0" width="105" height="24" backcolor="#D9E8E4" uuid="03aca965-bce4-4c4c-9e69-595571c81ff8"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22">
+			<textField>
+				<reportElement x="0" y="0" width="30" height="22" uuid="9e817d09-7f6b-4caf-9c6d-ed811c19fcc3"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="0" width="70" height="22" uuid="b2987295-1278-4be8-bf4c-0b8626be127c"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nim}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="100" y="0" width="135" height="22" uuid="d5819fe4-2815-4a1d-8758-3a74e3b5235f"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="235" y="0" width="35" height="22" uuid="2e36c523-7fe0-4c14-aa2e-19618bbe3580"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_kelamin}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="0" width="95" height="22" uuid="2e2def1c-46fb-44ce-a4bf-82f9d38d3da2"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prodi}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="365" y="0" width="85" height="22" uuid="590f29eb-bb02-45d4-9ddf-75eaa14646f7"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="450" y="0" width="105" height="22" uuid="8224aa28-d949-4147-8eed-a2ba4e3b9f6f"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="24">
+			<textField>
+				<reportElement x="0" y="4" width="277" height="16" uuid="2d0338a2-272b-4d1f-93ab-4f62f876e51a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Dicetak: " + new java.text.SimpleDateFormat("dd/MM/yyyy HH:mm").format(new java.util.Date())]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="278" y="4" width="277" height="16" uuid="db695718-542b-4c62-bc15-73d321c8650f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Halaman " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

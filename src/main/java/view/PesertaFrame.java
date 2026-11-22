@@ -151,6 +151,7 @@ public class PesertaFrame extends javax.swing.JFrame {
         btnHapus = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
         btnCetaksemua = new javax.swing.JButton();
+        btnCetak = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -229,6 +230,13 @@ public class PesertaFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCetak.setText("Cetak");
+        btnCetak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCetakActionPerformed(evt);
+            }
+        });
+
         btnCetaksemua.setText("Catak Semua");
         btnCetaksemua.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -275,7 +283,9 @@ public class PesertaFrame extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnCetaksemua, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(btnCetaksemua, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -314,7 +324,8 @@ public class PesertaFrame extends javax.swing.JFrame {
                     .addComponent(btnUbah, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReset, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCetaksemua, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnCetaksemua, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCetak, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -541,6 +552,10 @@ public class PesertaFrame extends javax.swing.JFrame {
         clearForm();
     }
 
+    private void btnCetakActionPerformed(java.awt.event.ActionEvent evt) {
+        report.ReportService.tampilkanLaporanPeserta(this);
+    }
+
     private void btnCetaksemuaActionPerformed(java.awt.event.ActionEvent evt) {
         try {
             List<Peserta> list = dao.findAll();
@@ -600,6 +615,7 @@ public class PesertaFrame extends javax.swing.JFrame {
     // Variables declaration
     private javax.swing.ButtonGroup bgJenisKelamin;
     private javax.swing.JButton btnCari;
+    private javax.swing.JButton btnCetak;
     private javax.swing.JButton btnCetaksemua;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnReset;
